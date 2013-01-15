@@ -1,0 +1,22 @@
+
+<table class="table table-hover">
+	<tr>
+		<th>Nome</th>
+		<th>Faltas</th>
+		<th></th>
+		<th></th>
+	</tr>
+
+	<% @employees.each do |employee| %>
+		<tr>
+			<td><%= employee.name %></td>
+			<td><%= employee.faults_number %></td>
+			<td><%= link_to 'Editar', '#' %></td>
+			<td><%= link_to 'Delete', employee, :confirm => "Vc tem certeza?", :method => :delete %></td>
+		</tr>
+	<% end %>	
+</table>
+
+<br />
+
+<%= link_to "Novo cadastro", new_employee_path %>
