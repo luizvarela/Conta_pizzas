@@ -1,0 +1,26 @@
+<%= hidden_field_tag :direction, params[:direction] %>
+<%= hidden_field_tag :sort, params[:sort] %>	
+
+<table class="table table-hover">
+	<tr>
+		<th><%=  sortable "nome"   %></th>
+		<th><%=  sortable "faltas" %></th>
+		<th></th>
+		<th></th>
+	</tr>
+
+	<% @employees.each do |employee| %>
+		
+		<tr>
+			<td><%= employee.name %></td>
+			<td><%= employee.faults_number %></td>
+			<td>
+			  <a data-toggle="modal" href="#edit-user-<%= employee.id %>" class="btn btn-mini" type="button">Editar</a>
+          	  <%= render employee %>
+			</td>
+			<td><%= link_to content_tag('i', '', class: 'icon-trash'), employee, confirm: "Deseja deletar '#{employee.name}'?", method: :delete %></td>
+		</tr>
+				
+	<% end %>	
+</table>
+<%= will_paginate @employees %>

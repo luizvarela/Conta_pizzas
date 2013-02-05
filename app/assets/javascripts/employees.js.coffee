@@ -45,3 +45,5 @@ $.rails.allowAction = (element) ->
   $modal_html.modal()
   # Prevent the original link from working
   return false
+
+

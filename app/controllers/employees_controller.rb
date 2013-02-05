@@ -1,9 +1,9 @@
 class EmployeesController < ApplicationController
-
+	helper_method :sort_column, :sort_direction
 	before_filter :authenticate_user!, :only => [:edit, :update, :destroy, :new, :create]
 
 	def index
-		@employees = Employee.all
+		@employees = Employee.search(params[:search]).order(sort_column + " " + sort_direction).paginate(:per_page => 5, :page => params[:page])
 	end
 
 	def new
@@ -52,6 +52,16 @@ class EmployeesController < ApplicationController
 		else
 			redirect_to :back, :notice => "Erro ao deletar"
 		end		
+	end
+
+	private
+
+	def sort_column
+		Employee.column_names.include?(params[:sort]) ? params[:sort] : "name"
+	end
+
+	def sort_direction
+		%w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
 	end
 		
 end

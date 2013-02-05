@@ -13407,3 +13407,1991 @@ Processing by EmployeesController#index as HTML
   Rendered layouts/_navigation.html.erb (4.7ms)
   Rendered layouts/_messages.html.erb (0.2ms)
 Completed 200 OK in 100ms (Views: 97.7ms | ActiveRecord: 0.8ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-01 08:03:18 -0300
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT "employees".* FROM "employees" [0m
+  Rendered employees/_employee.html.erb (760.3ms)
+  Rendered employees/_employee.html.erb (5.1ms)
+  Rendered employees/_employee.html.erb (6.0ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/index.html.erb within layouts/application (832.0ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 1542ms (Views: 1369.1ms | ActiveRecord: 23.5ms)
+
+
+Started PUT "/employees/3" for 127.0.0.1 at 2013-02-01 08:03:27 -0300
+Processing by EmployeesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KGGrK9ypZhOtN6TlCxWYpde+pZh6gIcCVjdG2dziKU0=", "employee"=>{"name"=>"User Teste", "faults_number"=>"5"}, "commit"=>"Editar", "id"=>"3"}
+Completed 401 Unauthorized in 45ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-02-01 08:03:27 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.6ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 105ms (Views: 83.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-01 08:03:32 -0300
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" 
+  Rendered employees/_employee.html.erb (6.3ms)
+  Rendered employees/_employee.html.erb (6.6ms)
+  Rendered employees/_employee.html.erb (7.3ms)
+  Rendered employees/_employee.html.erb (6.8ms)
+  Rendered employees/index.html.erb within layouts/application (32.5ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 107ms (Views: 104.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-02-01 08:03:36 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 69ms (Views: 68.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-02-01 08:03:41 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KGGrK9ypZhOtN6TlCxWYpde+pZh6gIcCVjdG2dziKU0=", "user"=>{"email"=>"user@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2013-01-28 21:57:00.083103', "current_sign_in_at" = '2013-02-01 11:03:42.129452', "sign_in_count" = 7, "updated_at" = '2013-02-01 11:03:42.178755' WHERE "users"."id" = 1[0m
+  [1m[35m (170.3ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 624ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-01 08:03:42 -0300
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees" 
+  Rendered employees/_employee.html.erb (5.9ms)
+  Rendered employees/_employee.html.erb (6.6ms)
+  Rendered employees/_employee.html.erb (6.2ms)
+  Rendered employees/_employee.html.erb (5.8ms)
+  Rendered employees/index.html.erb within layouts/application (30.2ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (247.9ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 339ms (Views: 336.4ms | ActiveRecord: 1.1ms)
+
+
+Started PUT "/employees/3" for 127.0.0.1 at 2013-02-01 08:03:49 -0300
+Processing by EmployeesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KGGrK9ypZhOtN6TlCxWYpde+pZh6gIcCVjdG2dziKU0=", "employee"=>{"name"=>"User Teste", "faults_number"=>"9"}, "commit"=>"Editar", "id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mUPDATE "employees" SET "faults_number" = 9, "updated_at" = '2013-02-01 11:03:49.453914' WHERE "employees"."id" = 3[0m
+  [1m[35m (330.5ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/employees
+Completed 302 Found in 339ms (ActiveRecord: 331.8ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2013-02-01 08:03:49 -0300
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees" [0m
+  Rendered employees/_employee.html.erb (7.4ms)
+  Rendered employees/_employee.html.erb (5.6ms)
+  Rendered employees/_employee.html.erb (6.6ms)
+  Rendered employees/_employee.html.erb (5.9ms)
+  Rendered employees/index.html.erb within layouts/application (30.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (4.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 100ms (Views: 98.2ms | ActiveRecord: 0.6ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-04 21:39:15 -0300
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT "employees".* FROM "employees" [0m
+  Rendered employees/_employee.html.erb (770.9ms)
+  Rendered employees/_employee.html.erb (4.9ms)
+  Rendered employees/_employee.html.erb (4.9ms)
+  Rendered employees/_employee.html.erb (4.8ms)
+  Rendered employees/index.html.erb within layouts/application (843.4ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 1571ms (Views: 1431.0ms | ActiveRecord: 5.2ms)
+
+
+Started PUT "/employees/3" for 127.0.0.1 at 2013-02-04 21:39:37 -0300
+Processing by EmployeesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zsV/mVR+A+8ezrVKkCl+0ajYdy/Hf48C3NCI7TJyQUY=", "employee"=>{"name"=>"User Teste", "faults_number"=>"10"}, "commit"=>"Editar", "id"=>"3"}
+Completed 401 Unauthorized in 44ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-02-04 21:39:37 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.6ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 94ms (Views: 75.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-02-04 21:39:43 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 72ms (Views: 71.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-02-04 21:39:48 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zsV/mVR+A+8ezrVKkCl+0ajYdy/Hf48C3NCI7TJyQUY=", "user"=>{"email"=>"user@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  UPDATE "users" SET "last_sign_in_at" = '2013-02-01 11:03:42.129452', "current_sign_in_at" = '2013-02-05 00:39:49.195714', "sign_in_count" = 8, "updated_at" = '2013-02-05 00:39:49.226634' WHERE "users"."id" = 1
+  [1m[36m (153.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 594ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-04 21:39:49 -0300
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees" [0m
+  Rendered employees/_employee.html.erb (5.8ms)
+  Rendered employees/_employee.html.erb (5.0ms)
+  Rendered employees/_employee.html.erb (5.8ms)
+  Rendered employees/_employee.html.erb (5.2ms)
+  Rendered employees/index.html.erb within layouts/application (27.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (165.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 252ms (Views: 249.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2013-02-04 21:39:53 -0300
+Processing by EmployeesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered employees/_form.html.erb (6.3ms)
+  Rendered employees/new.html.erb within layouts/application (7.8ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (3.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 73ms (Views: 70.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2013-02-04 21:40:00 -0300
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zsV/mVR+A+8ezrVKkCl+0ajYdy/Hf48C3NCI7TJyQUY=", "employee"=>{"name"=>"Luiz", "faults_number"=>"0"}, "commit"=>"Create Employee"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "employees" ("created_at", "faults_number", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 05 Feb 2013 00:40:00 UTC +00:00], ["faults_number", 0], ["name", "Luiz"], ["updated_at", Tue, 05 Feb 2013 00:40:00 UTC +00:00]]
+  [1m[35m (366.2ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/employees
+Completed 302 Found in 372ms (ActiveRecord: 367.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2013-02-04 21:40:00 -0300
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT "employees".* FROM "employees" [0m
+  Rendered employees/_employee.html.erb (7.2ms)
+  Rendered employees/_employee.html.erb (5.8ms)
+  Rendered employees/_employee.html.erb (5.7ms)
+  Rendered employees/_employee.html.erb (5.1ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/index.html.erb within layouts/application (35.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (4.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 105ms (Views: 102.3ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/employees/5" for 127.0.0.1 at 2013-02-04 21:40:08 -0300
+Processing by EmployeesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zsV/mVR+A+8ezrVKkCl+0ajYdy/Hf48C3NCI7TJyQUY=", "employee"=>{"name"=>"User Teste03", "faults_number"=>"8"}, "commit"=>"Editar", "id"=>"5"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mUPDATE "employees" SET "faults_number" = 8, "updated_at" = '2013-02-05 00:40:08.542655' WHERE "employees"."id" = 5[0m
+  [1m[35m (266.4ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/employees
+Completed 302 Found in 274ms (ActiveRecord: 267.4ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2013-02-04 21:40:08 -0300
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees" [0m
+  Rendered employees/_employee.html.erb (6.2ms)
+  Rendered employees/_employee.html.erb (5.6ms)
+  Rendered employees/_employee.html.erb (6.0ms)
+  Rendered employees/_employee.html.erb (5.2ms)
+  Rendered employees/_employee.html.erb (5.0ms)
+  Rendered employees/index.html.erb within layouts/application (34.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (4.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 100ms (Views: 98.8ms | ActiveRecord: 0.6ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/employees" for 127.0.0.1 at 2013-02-04 21:54:53 -0300
+Processing by EmployeesController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError - undefined local variable or method `sort_column' for #<EmployeesController:0xb31ab54>:
+  app/controllers/employees_controller.rb:6:in `index'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:414:in `_run__286281688__process_action__127090608__callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.11/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) activerecord-3.2.11/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.11/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.11/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `each'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:601:in `call'
+  (gem) better_errors-0.3.2/lib/better_errors/middleware.rb:51:in `app_call'
+  (gem) better_errors-0.3.2/lib/better_errors/middleware.rb:45:in `call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.3/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.3/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.3/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.3/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) activerecord-3.2.11/lib/active_record/query_cache.rb:64:in `call'
+  (gem) activerecord-3.2.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `_run__117651825__call__968407217__callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.11/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:16:in `call'
+  (gem) quiet_assets-1.0.1/lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.3/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.3/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.11/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.3/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/static.rb:62:in `call'
+  (gem) railties-3.2.11/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.11/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.3/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.11/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) rack-1.4.3/lib/rack/handler/webrick.rb:59:in `service'
+  /home/luiz-varela/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/luiz-varela/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/luiz-varela/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/90963230/variables" for 127.0.0.1 at 2013-02-04 21:54:53 -0300
+
+
+Started GET "/employees" for 127.0.0.1 at 2013-02-04 22:04:32 -0300
+Processing by EmployeesController#index as HTML
+Completed 500 Internal Server Error in 8ms
+
+ArgumentError - :page parameter required:
+  (gem) will_paginate-3.0.4/lib/will_paginate/active_record.rb:146:in `block in paginate'
+  (gem) will_paginate-3.0.4/lib/will_paginate/active_record.rb:146:in `fetch'
+  (gem) will_paginate-3.0.4/lib/will_paginate/active_record.rb:146:in `paginate'
+  app/controllers/employees_controller.rb:6:in `index'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:414:in `_run__286281688__process_action__127090608__callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.11/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) activerecord-3.2.11/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.11/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.11/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `each'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:601:in `call'
+  (gem) better_errors-0.3.2/lib/better_errors/middleware.rb:51:in `app_call'
+  (gem) better_errors-0.3.2/lib/better_errors/middleware.rb:45:in `call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.3/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.3/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.3/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.3/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) activerecord-3.2.11/lib/active_record/query_cache.rb:64:in `call'
+  (gem) activerecord-3.2.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `_run__117651825__call__968407217__callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.11/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:16:in `call'
+  (gem) quiet_assets-1.0.1/lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.3/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.3/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.11/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.3/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/static.rb:62:in `call'
+  (gem) railties-3.2.11/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.11/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.3/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.11/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) rack-1.4.3/lib/rack/handler/webrick.rb:59:in `service'
+  /home/luiz-varela/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/luiz-varela/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/luiz-varela/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/85779810/variables" for 127.0.0.1 at 2013-02-04 22:04:33 -0300
+
+
+Started GET "/employees" for 127.0.0.1 at 2013-02-04 22:06:18 -0300
+Processing by EmployeesController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+ArgumentError - :page parameter required:
+  (gem) will_paginate-3.0.4/lib/will_paginate/active_record.rb:146:in `block in paginate'
+  (gem) will_paginate-3.0.4/lib/will_paginate/active_record.rb:146:in `fetch'
+  (gem) will_paginate-3.0.4/lib/will_paginate/active_record.rb:146:in `paginate'
+  app/controllers/employees_controller.rb:6:in `index'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:414:in `_run__286281688__process_action__127090608__callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.11/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) activerecord-3.2.11/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.11/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.11/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `each'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:601:in `call'
+  (gem) better_errors-0.3.2/lib/better_errors/middleware.rb:51:in `app_call'
+  (gem) better_errors-0.3.2/lib/better_errors/middleware.rb:45:in `call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.3/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.3/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.3/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.3/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) activerecord-3.2.11/lib/active_record/query_cache.rb:64:in `call'
+  (gem) activerecord-3.2.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `_run__117651825__call__968407217__callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.11/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:16:in `call'
+  (gem) quiet_assets-1.0.1/lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.3/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.3/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.11/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.3/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/static.rb:62:in `call'
+  (gem) railties-3.2.11/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.11/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.3/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.11/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) rack-1.4.3/lib/rack/handler/webrick.rb:59:in `service'
+  /home/luiz-varela/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/luiz-varela/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/luiz-varela/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/95080080/variables" for 127.0.0.1 at 2013-02-04 22:06:18 -0300
+
+
+Started GET "/employees" for 127.0.0.1 at 2013-02-04 22:10:12 -0300
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY name asc[0m
+  Rendered employees/_employee.html.erb (659.4ms)
+  Rendered employees/_employee.html.erb (5.3ms)
+  Rendered employees/_employee.html.erb (5.1ms)
+  Rendered employees/_employee.html.erb (6.1ms)
+  Rendered employees/_employee.html.erb (4.9ms)
+  Rendered employees/index.html.erb within layouts/application (729.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (207.7ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 1106ms (Views: 1102.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/?direction=asc&sort=nome" for 127.0.0.1 at 2013-02-04 22:10:16 -0300
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"nome"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY name asc[0m
+  Rendered employees/_employee.html.erb (8.5ms)
+  Rendered employees/_employee.html.erb (7.8ms)
+  Rendered employees/_employee.html.erb (7.7ms)
+  Rendered employees/_employee.html.erb (7.5ms)
+  Rendered employees/_employee.html.erb (53.0ms)
+  Rendered employees/index.html.erb within layouts/application (96.6ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (3.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 145ms (Views: 144.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?direction=asc&sort=nome" for 127.0.0.1 at 2013-02-04 22:10:18 -0300
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"nome"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc
+  Rendered employees/_employee.html.erb (5.7ms)
+  Rendered employees/_employee.html.erb (5.0ms)
+  Rendered employees/_employee.html.erb (5.2ms)
+  Rendered employees/_employee.html.erb (4.9ms)
+  Rendered employees/_employee.html.erb (4.8ms)
+  Rendered employees/index.html.erb within layouts/application (33.7ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (3.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 102ms (Views: 101.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?direction=asc&sort=nome" for 127.0.0.1 at 2013-02-04 22:10:19 -0300
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"nome"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY name asc[0m
+  Rendered employees/_employee.html.erb (5.7ms)
+  Rendered employees/_employee.html.erb (5.2ms)
+  Rendered employees/_employee.html.erb (6.9ms)
+  Rendered employees/_employee.html.erb (5.3ms)
+  Rendered employees/_employee.html.erb (5.3ms)
+  Rendered employees/index.html.erb within layouts/application (69.2ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (3.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 105ms (Views: 104.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?direction=asc&sort=faltas" for 127.0.0.1 at 2013-02-04 22:10:21 -0300
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"faltas"}
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc
+  Rendered employees/_employee.html.erb (8.2ms)
+  Rendered employees/_employee.html.erb (7.9ms)
+  Rendered employees/_employee.html.erb (7.7ms)
+  Rendered employees/_employee.html.erb (5.6ms)
+  Rendered employees/_employee.html.erb (5.6ms)
+  Rendered employees/index.html.erb within layouts/application (46.0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (3.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 118ms (Views: 117.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?direction=asc&sort=faltas" for 127.0.0.1 at 2013-02-04 22:10:22 -0300
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"faltas"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY name asc[0m
+  Rendered employees/_employee.html.erb (6.0ms)
+  Rendered employees/_employee.html.erb (5.7ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/_employee.html.erb (5.2ms)
+  Rendered employees/_employee.html.erb (5.0ms)
+  Rendered employees/index.html.erb within layouts/application (36.5ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (3.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 73ms (Views: 71.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?direction=asc&sort=faltas" for 127.0.0.1 at 2013-02-04 22:10:23 -0300
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"faltas"}
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc
+  Rendered employees/_employee.html.erb (7.3ms)
+  Rendered employees/_employee.html.erb (5.7ms)
+  Rendered employees/_employee.html.erb (5.5ms)
+  Rendered employees/_employee.html.erb (5.1ms)
+  Rendered employees/_employee.html.erb (5.1ms)
+  Rendered employees/index.html.erb within layouts/application (38.2ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (3.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 111ms (Views: 109.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?direction=asc&sort=nome" for 127.0.0.1 at 2013-02-04 22:10:29 -0300
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"nome"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY name asc[0m
+  Rendered employees/_employee.html.erb (5.8ms)
+  Rendered employees/_employee.html.erb (5.3ms)
+  Rendered employees/_employee.html.erb (6.1ms)
+  Rendered employees/_employee.html.erb (5.2ms)
+  Rendered employees/_employee.html.erb (5.5ms)
+  Rendered employees/index.html.erb within layouts/application (36.2ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (3.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 103ms (Views: 102.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?direction=asc&sort=nome" for 127.0.0.1 at 2013-02-04 22:11:01 -0300
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"nome"}
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc
+  Rendered employees/_employee.html.erb (8.2ms)
+  Rendered employees/_employee.html.erb (7.5ms)
+  Rendered employees/_employee.html.erb (7.3ms)
+  Rendered employees/_employee.html.erb (7.3ms)
+  Rendered employees/_employee.html.erb (7.3ms)
+  Rendered employees/index.html.erb within layouts/application (48.9ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (4.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 152ms (Views: 151.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/?direction=asc&sort=nome" for 127.0.0.1 at 2013-02-04 22:11:03 -0300
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"nome"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY name asc[0m
+  Rendered employees/_employee.html.erb (5.8ms)
+  Rendered employees/_employee.html.erb (5.0ms)
+  Rendered employees/_employee.html.erb (5.0ms)
+  Rendered employees/_employee.html.erb (5.0ms)
+  Rendered employees/_employee.html.erb (5.0ms)
+  Rendered employees/index.html.erb within layouts/application (34.2ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (3.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 101ms (Views: 100.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?direction=asc&sort=nome" for 127.0.0.1 at 2013-02-04 22:11:04 -0300
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"nome"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc
+  Rendered employees/_employee.html.erb (5.8ms)
+  Rendered employees/_employee.html.erb (5.6ms)
+  Rendered employees/_employee.html.erb (5.3ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/index.html.erb within layouts/application (36.1ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (3.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 105ms (Views: 104.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?direction=asc&sort=faltas" for 127.0.0.1 at 2013-02-04 22:11:11 -0300
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"faltas"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY name asc[0m
+  Rendered employees/_employee.html.erb (5.9ms)
+  Rendered employees/_employee.html.erb (5.0ms)
+  Rendered employees/_employee.html.erb (5.2ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/_employee.html.erb (5.2ms)
+  Rendered employees/index.html.erb within layouts/application (35.1ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (3.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 104ms (Views: 103.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?direction=asc&sort=faltas" for 127.0.0.1 at 2013-02-04 22:11:13 -0300
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"faltas"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc
+  Rendered employees/_employee.html.erb (5.6ms)
+  Rendered employees/_employee.html.erb (5.0ms)
+  Rendered employees/_employee.html.erb (5.6ms)
+  Rendered employees/_employee.html.erb (5.7ms)
+  Rendered employees/_employee.html.erb (5.1ms)
+  Rendered employees/index.html.erb within layouts/application (35.4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (3.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 104ms (Views: 103.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?direction=asc&sort=faltas" for 127.0.0.1 at 2013-02-04 22:11:14 -0300
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"faltas"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY name asc[0m
+  Rendered employees/_employee.html.erb (5.6ms)
+  Rendered employees/_employee.html.erb (5.0ms)
+  Rendered employees/_employee.html.erb (5.6ms)
+  Rendered employees/_employee.html.erb (5.1ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/index.html.erb within layouts/application (35.1ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (4.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 106ms (Views: 105.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?direction=asc&sort=faltas" for 127.0.0.1 at 2013-02-04 22:11:15 -0300
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"faltas"}
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc
+  Rendered employees/_employee.html.erb (8.2ms)
+  Rendered employees/_employee.html.erb (7.4ms)
+  Rendered employees/_employee.html.erb (7.5ms)
+  Rendered employees/_employee.html.erb (39.4ms)
+  Rendered employees/_employee.html.erb (5.6ms)
+  Rendered employees/index.html.erb within layouts/application (78.9ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (4.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 118ms (Views: 116.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?direction=asc&sort=faltas" for 127.0.0.1 at 2013-02-04 22:11:16 -0300
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"faltas"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY name asc[0m
+  Rendered employees/_employee.html.erb (6.0ms)
+  Rendered employees/_employee.html.erb (5.3ms)
+  Rendered employees/_employee.html.erb (6.7ms)
+  Rendered employees/_employee.html.erb (6.2ms)
+  Rendered employees/_employee.html.erb (5.3ms)
+  Rendered employees/index.html.erb within layouts/application (38.4ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (3.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 106ms (Views: 105.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?direction=asc&sort=nome" for 127.0.0.1 at 2013-02-04 22:12:14 -0300
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"nome"}
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc
+  Rendered employees/_employee.html.erb (45.6ms)
+  Rendered employees/_employee.html.erb (5.5ms)
+  Rendered employees/_employee.html.erb (5.0ms)
+  Rendered employees/_employee.html.erb (5.1ms)
+  Rendered employees/_employee.html.erb (7.3ms)
+  Rendered employees/index.html.erb within layouts/application (78.9ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (4.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 126ms (Views: 125.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-04 22:13:31 -0300
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY name asc[0m
+  Rendered employees/_employee.html.erb (8.4ms)
+  Rendered employees/_employee.html.erb (8.3ms)
+  Rendered employees/_employee.html.erb (7.6ms)
+  Rendered employees/_employee.html.erb (8.5ms)
+  Rendered employees/_employee.html.erb (7.5ms)
+  Rendered employees/index.html.erb within layouts/application (53.4ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (5.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 162ms (Views: 161.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-04 22:14:20 -0300
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (1.2ms)[0m  SELECT "employees".* FROM "employees" ORDER BY nome asc
+SQLite3::SQLException: no such column: nome: SELECT "employees".* FROM "employees"  ORDER BY nome asc
+  Rendered employees/index.html.erb within layouts/application (55.6ms)
+Completed 500 Internal Server Error in 64ms
+
+ActiveRecord::StatementInvalid - SQLite3::SQLException: no such column: nome: SELECT "employees".* FROM "employees"  ORDER BY nome asc:
+  (gem) sqlite3-1.3.6/lib/sqlite3/database.rb:91:in `initialize'
+  (gem) sqlite3-1.3.6/lib/sqlite3/database.rb:91:in `new'
+  (gem) sqlite3-1.3.6/lib/sqlite3/database.rb:91:in `prepare'
+  (gem) activerecord-3.2.11/lib/active_record/connection_adapters/sqlite_adapter.rb:246:in `block in exec_query'
+  (gem) activerecord-3.2.11/lib/active_record/connection_adapters/abstract_adapter.rb:280:in `block in log'
+  (gem) activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activerecord-3.2.11/lib/active_record/connection_adapters/abstract_adapter.rb:275:in `log'
+  (gem) activerecord-3.2.11/lib/active_record/connection_adapters/sqlite_adapter.rb:242:in `exec_query'
+  (gem) activerecord-3.2.11/lib/active_record/connection_adapters/sqlite_adapter.rb:467:in `select'
+  (gem) activerecord-3.2.11/lib/active_record/connection_adapters/abstract/database_statements.rb:18:in `select_all'
+  (gem) activerecord-3.2.11/lib/active_record/connection_adapters/abstract/query_cache.rb:61:in `block in select_all'
+  (gem) activerecord-3.2.11/lib/active_record/connection_adapters/abstract/query_cache.rb:75:in `cache_sql'
+  (gem) activerecord-3.2.11/lib/active_record/connection_adapters/abstract/query_cache.rb:61:in `select_all'
+  (gem) activerecord-3.2.11/lib/active_record/querying.rb:38:in `block in find_by_sql'
+  (gem) activerecord-3.2.11/lib/active_record/explain.rb:40:in `logging_query_plan'
+  (gem) activerecord-3.2.11/lib/active_record/querying.rb:37:in `find_by_sql'
+  (gem) activerecord-3.2.11/lib/active_record/relation.rb:171:in `exec_queries'
+  (gem) activerecord-3.2.11/lib/active_record/relation.rb:160:in `block in to_a'
+  (gem) activerecord-3.2.11/lib/active_record/explain.rb:33:in `logging_query_plan'
+  (gem) activerecord-3.2.11/lib/active_record/relation.rb:159:in `to_a'
+  (gem) activerecord-3.2.11/lib/active_record/relation/delegation.rb:6:in `each'
+  app/views/employees/index.html.erb:9:in `_app_views_employees_index_html_erb___209417346__623824478'
+  (gem) actionpack-3.2.11/lib/action_view/template.rb:145:in `block in render'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:125:in `instrument'
+  (gem) actionpack-3.2.11/lib/action_view/template.rb:143:in `render'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:18:in `render'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/renderer.rb:36:in `render_template'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/renderer.rb:17:in `render'
+  (gem) actionpack-3.2.11/lib/abstract_controller/rendering.rb:110:in `_render_template'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  (gem) actionpack-3.2.11/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  (gem) actionpack-3.2.11/lib/abstract_controller/rendering.rb:88:in `render'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rendering.rb:16:in `render'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  (gem) activesupport-3.2.11/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /home/luiz-varela/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  (gem) activesupport-3.2.11/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  (gem) activerecord-3.2.11/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:39:in `render'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:414:in `_run__286281688__process_action__127090608__callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.11/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) activerecord-3.2.11/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.11/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.11/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/mapper.rb:42:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `each'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:601:in `call'
+  (gem) better_errors-0.3.2/lib/better_errors/middleware.rb:51:in `app_call'
+  (gem) better_errors-0.3.2/lib/better_errors/middleware.rb:45:in `call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.3/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.3/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.3/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.3/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) activerecord-3.2.11/lib/active_record/query_cache.rb:64:in `call'
+  (gem) activerecord-3.2.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `_run__117651825__call__968407217__callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.11/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:16:in `call'
+  (gem) quiet_assets-1.0.1/lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.3/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.3/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.11/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.3/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/static.rb:62:in `call'
+  (gem) railties-3.2.11/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.11/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.3/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.11/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) rack-1.4.3/lib/rack/handler/webrick.rb:59:in `service'
+  /home/luiz-varela/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/luiz-varela/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/luiz-varela/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/-630210888/variables" for 127.0.0.1 at 2013-02-04 22:14:20 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-04 22:14:32 -0300
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc
+  Rendered employees/_employee.html.erb (6.9ms)
+  Rendered employees/_employee.html.erb (6.1ms)
+  Rendered employees/_employee.html.erb (4.9ms)
+  Rendered employees/_employee.html.erb (5.0ms)
+  Rendered employees/_employee.html.erb (5.1ms)
+  Rendered employees/index.html.erb within layouts/application (43.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (15.8ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 129ms (Views: 126.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2013-02-04 22:14:38 -0300
+Processing by EmployeesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered employees/_form.html.erb (6.6ms)
+  Rendered employees/new.html.erb within layouts/application (8.0ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (3.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 88ms (Views: 75.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2013-02-04 22:14:45 -0300
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zsV/mVR+A+8ezrVKkCl+0ajYdy/Hf48C3NCI7TJyQUY=", "employee"=>{"name"=>"ABC", "faults_number"=>"2"}, "commit"=>"Create Employee"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.1ms)[0m  INSERT INTO "employees" ("created_at", "faults_number", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Tue, 05 Feb 2013 01:14:45 UTC +00:00], ["faults_number", 2], ["name", "ABC"], ["updated_at", Tue, 05 Feb 2013 01:14:45 UTC +00:00]]
+  [1m[36m (270.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/employees
+Completed 302 Found in 282ms (ActiveRecord: 275.1ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2013-02-04 22:14:45 -0300
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc
+  Rendered employees/_employee.html.erb (6.2ms)
+  Rendered employees/_employee.html.erb (6.6ms)
+  Rendered employees/_employee.html.erb (7.2ms)
+  Rendered employees/_employee.html.erb (6.1ms)
+  Rendered employees/_employee.html.erb (5.7ms)
+  Rendered employees/_employee.html.erb (6.6ms)
+  Rendered employees/index.html.erb within layouts/application (50.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (4.8ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 120ms (Views: 119.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/?direction=asc&sort=nome" for 127.0.0.1 at 2013-02-04 22:14:49 -0300
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"nome"}
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc
+  Rendered employees/_employee.html.erb (8.3ms)
+  Rendered employees/_employee.html.erb (7.5ms)
+  Rendered employees/_employee.html.erb (7.5ms)
+  Rendered employees/_employee.html.erb (7.4ms)
+  Rendered employees/_employee.html.erb (5.8ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/index.html.erb within layouts/application (92.2ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (3.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 128ms (Views: 126.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?direction=asc&sort=nome" for 127.0.0.1 at 2013-02-04 22:14:50 -0300
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"nome"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY name asc[0m
+  Rendered employees/_employee.html.erb (8.4ms)
+  Rendered employees/_employee.html.erb (7.7ms)
+  Rendered employees/_employee.html.erb (5.6ms)
+  Rendered employees/_employee.html.erb (5.6ms)
+  Rendered employees/_employee.html.erb (5.5ms)
+  Rendered employees/_employee.html.erb (5.8ms)
+  Rendered employees/index.html.erb within layouts/application (50.1ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (3.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 121ms (Views: 119.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?direction=asc&sort=nome" for 127.0.0.1 at 2013-02-04 22:14:52 -0300
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"nome"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc
+  Rendered employees/_employee.html.erb (37.8ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/_employee.html.erb (5.2ms)
+  Rendered employees/_employee.html.erb (5.3ms)
+  Rendered employees/_employee.html.erb (5.1ms)
+  Rendered employees/index.html.erb within layouts/application (74.0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (3.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 111ms (Views: 110.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2013-02-04 22:14:54 -0300
+Processing by EmployeesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered employees/_form.html.erb (8.5ms)
+  Rendered employees/new.html.erb within layouts/application (9.8ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (3.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 89ms (Views: 87.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2013-02-04 22:15:02 -0300
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zsV/mVR+A+8ezrVKkCl+0ajYdy/Hf48C3NCI7TJyQUY=", "employee"=>{"name"=>"YEW", "faults_number"=>"34"}, "commit"=>"Create Employee"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "employees" ("created_at", "faults_number", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Tue, 05 Feb 2013 01:15:02 UTC +00:00], ["faults_number", 34], ["name", "YEW"], ["updated_at", Tue, 05 Feb 2013 01:15:02 UTC +00:00]]
+  [1m[36m (358.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/employees
+Completed 302 Found in 365ms (ActiveRecord: 360.2ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2013-02-04 22:15:03 -0300
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc
+  Rendered employees/_employee.html.erb (6.7ms)
+  Rendered employees/_employee.html.erb (5.2ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/_employee.html.erb (5.2ms)
+  Rendered employees/_employee.html.erb (5.5ms)
+  Rendered employees/_employee.html.erb (6.0ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/index.html.erb within layouts/application (50.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (4.5ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 123ms (Views: 121.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/?direction=asc&sort=nome" for 127.0.0.1 at 2013-02-04 22:15:08 -0300
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"nome"}
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc
+  Rendered employees/_employee.html.erb (8.2ms)
+  Rendered employees/_employee.html.erb (7.5ms)
+  Rendered employees/_employee.html.erb (7.5ms)
+  Rendered employees/_employee.html.erb (7.3ms)
+  Rendered employees/_employee.html.erb (7.5ms)
+  Rendered employees/_employee.html.erb (7.5ms)
+  Rendered employees/_employee.html.erb (7.6ms)
+  Rendered employees/index.html.erb within layouts/application (67.8ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (3.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 141ms (Views: 139.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?direction=asc&sort=nome" for 127.0.0.1 at 2013-02-04 22:15:11 -0300
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"nome"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY name asc[0m
+  Rendered employees/_employee.html.erb (5.6ms)
+  Rendered employees/_employee.html.erb (5.0ms)
+  Rendered employees/_employee.html.erb (6.9ms)
+  Rendered employees/_employee.html.erb (5.1ms)
+  Rendered employees/_employee.html.erb (5.3ms)
+  Rendered employees/_employee.html.erb (5.1ms)
+  Rendered employees/_employee.html.erb (5.1ms)
+  Rendered employees/index.html.erb within layouts/application (48.5ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (3.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 117ms (Views: 116.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2013-02-04 22:15:25 -0300
+Processing by EmployeesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered employees/_form.html.erb (8.0ms)
+  Rendered employees/new.html.erb within layouts/application (9.3ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (3.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 81ms (Views: 78.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2013-02-04 22:15:30 -0300
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zsV/mVR+A+8ezrVKkCl+0ajYdy/Hf48C3NCI7TJyQUY=", "employee"=>{"name"=>"xxx", "faults_number"=>"12"}, "commit"=>"Create Employee"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "employees" ("created_at", "faults_number", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 05 Feb 2013 01:15:30 UTC +00:00], ["faults_number", 12], ["name", "xxx"], ["updated_at", Tue, 05 Feb 2013 01:15:30 UTC +00:00]]
+  [1m[35m (340.7ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/employees
+Completed 302 Found in 347ms (ActiveRecord: 342.2ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2013-02-04 22:15:31 -0300
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY name asc[0m
+  Rendered employees/_employee.html.erb (5.9ms)
+  Rendered employees/_employee.html.erb (5.0ms)
+  Rendered employees/_employee.html.erb (6.0ms)
+  Rendered employees/_employee.html.erb (6.7ms)
+  Rendered employees/_employee.html.erb (6.1ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/_employee.html.erb (5.1ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/index.html.erb within layouts/application (59.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (4.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 129ms (Views: 128.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/?direction=asc&sort=faltas" for 127.0.0.1 at 2013-02-04 22:15:38 -0300
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"faltas"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY name asc[0m
+  Rendered employees/_employee.html.erb (8.3ms)
+  Rendered employees/_employee.html.erb (7.7ms)
+  Rendered employees/_employee.html.erb (7.5ms)
+  Rendered employees/_employee.html.erb (7.6ms)
+  Rendered employees/_employee.html.erb (7.6ms)
+  Rendered employees/_employee.html.erb (49.0ms)
+  Rendered employees/_employee.html.erb (5.5ms)
+  Rendered employees/_employee.html.erb (5.3ms)
+  Rendered employees/index.html.erb within layouts/application (114.7ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (3.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 151ms (Views: 150.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?direction=asc&sort=nome" for 127.0.0.1 at 2013-02-04 22:15:42 -0300
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"nome"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc
+  Rendered employees/_employee.html.erb (6.4ms)
+  Rendered employees/_employee.html.erb (5.2ms)
+  Rendered employees/_employee.html.erb (6.6ms)
+  Rendered employees/_employee.html.erb (5.1ms)
+  Rendered employees/_employee.html.erb (5.3ms)
+  Rendered employees/_employee.html.erb (5.2ms)
+  Rendered employees/_employee.html.erb (5.2ms)
+  Rendered employees/_employee.html.erb (5.6ms)
+  Rendered employees/index.html.erb within layouts/application (56.7ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (3.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 126ms (Views: 125.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?direction=asc&sort=nome" for 127.0.0.1 at 2013-02-04 22:17:26 -0300
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"nome"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY name asc[0m
+  Rendered employees/_employee.html.erb (8.5ms)
+  Rendered employees/_employee.html.erb (7.5ms)
+  Rendered employees/_employee.html.erb (7.5ms)
+  Rendered employees/_employee.html.erb (7.7ms)
+  Rendered employees/_employee.html.erb (7.6ms)
+  Rendered employees/_employee.html.erb (7.5ms)
+  Rendered employees/_employee.html.erb (7.7ms)
+  Rendered employees/_employee.html.erb (7.4ms)
+  Rendered employees/index.html.erb within layouts/application (79.1ms)
+Compiled application.css  (92ms)  (pid 14788)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (3.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 284ms (Views: 283.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/?direction=asc&sort=nome" for 127.0.0.1 at 2013-02-04 22:17:28 -0300
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"nome"}
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc
+  Rendered employees/_employee.html.erb (5.7ms)
+  Rendered employees/_employee.html.erb (5.2ms)
+  Rendered employees/_employee.html.erb (6.1ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/_employee.html.erb (5.5ms)
+  Rendered employees/_employee.html.erb (5.5ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/index.html.erb within layouts/application (56.5ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (3.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 130ms (Views: 129.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?direction=asc&sort=nome" for 127.0.0.1 at 2013-02-04 22:17:53 -0300
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"nome"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY name asc[0m
+  Rendered employees/_employee.html.erb (6.6ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/_employee.html.erb (5.5ms)
+  Rendered employees/_employee.html.erb (5.3ms)
+  Rendered employees/_employee.html.erb (5.2ms)
+  Rendered employees/_employee.html.erb (5.2ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/index.html.erb within layouts/application (56.8ms)
+Compiled employees.css  (6ms)  (pid 14788)
+Compiled application.css  (5ms)  (pid 14788)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (3.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 219ms (Views: 218.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?direction=asc&sort=nome" for 127.0.0.1 at 2013-02-04 22:17:55 -0300
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"nome"}
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc
+  Rendered employees/_employee.html.erb (8.7ms)
+  Rendered employees/_employee.html.erb (9.5ms)
+  Rendered employees/_employee.html.erb (8.4ms)
+  Rendered employees/_employee.html.erb (7.6ms)
+  Rendered employees/_employee.html.erb (8.1ms)
+  Rendered employees/_employee.html.erb (7.8ms)
+  Rendered employees/_employee.html.erb (62.9ms)
+  Rendered employees/_employee.html.erb (8.0ms)
+  Rendered employees/index.html.erb within layouts/application (140.0ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (4.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 200ms (Views: 198.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/?direction=asc&sort=nome" for 127.0.0.1 at 2013-02-04 22:17:58 -0300
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"nome"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY name asc[0m
+  Rendered employees/_employee.html.erb (8.5ms)
+  Rendered employees/_employee.html.erb (8.0ms)
+  Rendered employees/_employee.html.erb (5.1ms)
+  Rendered employees/_employee.html.erb (4.9ms)
+  Rendered employees/_employee.html.erb (7.5ms)
+  Rendered employees/_employee.html.erb (5.6ms)
+  Rendered employees/_employee.html.erb (5.2ms)
+  Rendered employees/_employee.html.erb (6.3ms)
+  Rendered employees/index.html.erb within layouts/application (65.5ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (3.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 138ms (Views: 136.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/?direction=asc&sort=nome" for 127.0.0.1 at 2013-02-04 22:17:59 -0300
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"nome"}
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc
+  Rendered employees/_employee.html.erb (9.0ms)
+  Rendered employees/_employee.html.erb (6.6ms)
+  Rendered employees/_employee.html.erb (5.6ms)
+  Rendered employees/_employee.html.erb (5.0ms)
+  Rendered employees/_employee.html.erb (5.7ms)
+  Rendered employees/_employee.html.erb (6.2ms)
+  Rendered employees/_employee.html.erb (5.1ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/index.html.erb within layouts/application (63.0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (3.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 132ms (Views: 131.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?direction=asc&sort=nome" for 127.0.0.1 at 2013-02-04 22:18:00 -0300
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"nome"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY name asc[0m
+  Rendered employees/_employee.html.erb (5.9ms)
+  Rendered employees/_employee.html.erb (5.3ms)
+  Rendered employees/_employee.html.erb (5.7ms)
+  Rendered employees/_employee.html.erb (6.9ms)
+  Rendered employees/_employee.html.erb (6.0ms)
+  Rendered employees/_employee.html.erb (5.0ms)
+  Rendered employees/_employee.html.erb (6.7ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/index.html.erb within layouts/application (59.8ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (4.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 137ms (Views: 136.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?direction=asc&sort=nome" for 127.0.0.1 at 2013-02-04 22:22:44 -0300
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"nome"}
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc
+  Rendered employees/_employee.html.erb (6.4ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/_employee.html.erb (5.9ms)
+  Rendered employees/_employee.html.erb (4.9ms)
+  Rendered employees/_employee.html.erb (4.9ms)
+  Rendered employees/_employee.html.erb (5.1ms)
+  Rendered employees/_employee.html.erb (5.9ms)
+  Rendered employees/_employee.html.erb (5.2ms)
+  Rendered employees/index.html.erb within layouts/application (57.6ms)
+Compiled employees.css  (2ms)  (pid 14788)
+Compiled application.css  (5ms)  (pid 14788)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (3.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 219ms (Views: 218.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2013-02-04 22:22:46 -0300
+Processing by EmployeesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered employees/_form.html.erb (8.5ms)
+  Rendered employees/new.html.erb within layouts/application (9.8ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (3.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 84ms (Views: 82.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2013-02-04 22:22:58 -0300
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zsV/mVR+A+8ezrVKkCl+0ajYdy/Hf48C3NCI7TJyQUY=", "employee"=>{"name"=>"11AAUser", "faults_number"=>"1"}, "commit"=>"Create Employee"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "employees" ("created_at", "faults_number", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Tue, 05 Feb 2013 01:22:58 UTC +00:00], ["faults_number", 1], ["name", "11AAUser"], ["updated_at", Tue, 05 Feb 2013 01:22:58 UTC +00:00]]
+  [1m[36m (363.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/employees
+Completed 302 Found in 368ms (ActiveRecord: 364.7ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2013-02-04 22:22:58 -0300
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc
+  Rendered employees/_employee.html.erb (6.7ms)
+  Rendered employees/_employee.html.erb (6.1ms)
+  Rendered employees/_employee.html.erb (6.0ms)
+  Rendered employees/_employee.html.erb (5.1ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/_employee.html.erb (4.9ms)
+  Rendered employees/_employee.html.erb (5.2ms)
+  Rendered employees/_employee.html.erb (5.0ms)
+  Rendered employees/_employee.html.erb (5.0ms)
+  Rendered employees/index.html.erb within layouts/application (63.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (4.4ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 132ms (Views: 131.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/?direction=asc&sort=nome" for 127.0.0.1 at 2013-02-04 22:23:01 -0300
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"nome"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc
+  Rendered employees/_employee.html.erb (5.9ms)
+  Rendered employees/_employee.html.erb (4.9ms)
+  Rendered employees/_employee.html.erb (4.9ms)
+  Rendered employees/_employee.html.erb (5.2ms)
+  Rendered employees/_employee.html.erb (5.1ms)
+  Rendered employees/_employee.html.erb (5.2ms)
+  Rendered employees/_employee.html.erb (5.5ms)
+  Rendered employees/_employee.html.erb (5.1ms)
+  Rendered employees/_employee.html.erb (40.9ms)
+  Rendered employees/index.html.erb within layouts/application (96.0ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (3.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 130ms (Views: 129.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?direction=asc&sort=nome" for 127.0.0.1 at 2013-02-04 22:23:02 -0300
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"nome"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY name asc[0m
+  Rendered employees/_employee.html.erb (6.1ms)
+  Rendered employees/_employee.html.erb (6.1ms)
+  Rendered employees/_employee.html.erb (5.7ms)
+  Rendered employees/_employee.html.erb (5.1ms)
+  Rendered employees/_employee.html.erb (4.9ms)
+  Rendered employees/_employee.html.erb (4.8ms)
+  Rendered employees/_employee.html.erb (4.8ms)
+  Rendered employees/_employee.html.erb (5.6ms)
+  Rendered employees/_employee.html.erb (4.8ms)
+  Rendered employees/index.html.erb within layouts/application (61.0ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (3.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 131ms (Views: 129.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?direction=asc&sort=nome" for 127.0.0.1 at 2013-02-04 22:23:03 -0300
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"nome"}
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc
+  Rendered employees/_employee.html.erb (8.4ms)
+  Rendered employees/_employee.html.erb (7.6ms)
+  Rendered employees/_employee.html.erb (8.5ms)
+  Rendered employees/_employee.html.erb (7.9ms)
+  Rendered employees/_employee.html.erb (7.8ms)
+  Rendered employees/_employee.html.erb (7.5ms)
+  Rendered employees/_employee.html.erb (7.5ms)
+  Rendered employees/_employee.html.erb (5.2ms)
+  Rendered employees/_employee.html.erb (4.9ms)
+  Rendered employees/index.html.erb within layouts/application (126.5ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (3.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 161ms (Views: 160.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/?direction=asc&sort=nome" for 127.0.0.1 at 2013-02-04 22:25:29 -0300
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"nome"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY name asc LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "employees" 
+  Rendered employees/_employee.html.erb (6.9ms)
+  Rendered employees/_employee.html.erb (5.0ms)
+  Rendered employees/_employee.html.erb (5.5ms)
+  Rendered employees/_employee.html.erb (5.5ms)
+  Rendered employees/_employee.html.erb (5.2ms)
+  Rendered employees/index.html.erb within layouts/application (47.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (16.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 136ms (Views: 132.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/?direction=asc&page=2&sort=nome" for 127.0.0.1 at 2013-02-04 22:25:33 -0300
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "page"=>"2", "sort"=>"nome"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY name asc LIMIT 5 OFFSET 5[0m
+  Rendered employees/_employee.html.erb (6.1ms)
+  Rendered employees/_employee.html.erb (5.0ms)
+  Rendered employees/_employee.html.erb (5.2ms)
+  Rendered employees/_employee.html.erb (5.7ms)
+  Rendered employees/index.html.erb within layouts/application (31.2ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (3.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 104ms (Views: 102.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?direction=asc&page=1&sort=nome" for 127.0.0.1 at 2013-02-04 22:25:37 -0300
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "page"=>"1", "sort"=>"nome"}
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc LIMIT 5 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "employees" [0m
+  Rendered employees/_employee.html.erb (6.2ms)
+  Rendered employees/_employee.html.erb (5.1ms)
+  Rendered employees/_employee.html.erb (6.3ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/_employee.html.erb (5.1ms)
+  Rendered employees/index.html.erb within layouts/application (38.4ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (3.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 109ms (Views: 108.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/?direction=asc&page=2&sort=nome" for 127.0.0.1 at 2013-02-04 22:25:38 -0300
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "page"=>"2", "sort"=>"nome"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc LIMIT 5 OFFSET 5
+  Rendered employees/_employee.html.erb (5.6ms)
+  Rendered employees/_employee.html.erb (5.3ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/_employee.html.erb (5.7ms)
+  Rendered employees/index.html.erb within layouts/application (30.1ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (3.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 100ms (Views: 99.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?direction=asc&page=1&sort=nome" for 127.0.0.1 at 2013-02-04 22:25:40 -0300
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "page"=>"1", "sort"=>"nome"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY name asc LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "employees" 
+  Rendered employees/_employee.html.erb (5.8ms)
+  Rendered employees/_employee.html.erb (5.3ms)
+  Rendered employees/_employee.html.erb (5.7ms)
+  Rendered employees/_employee.html.erb (5.0ms)
+  Rendered employees/_employee.html.erb (5.1ms)
+  Rendered employees/index.html.erb within layouts/application (36.9ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (3.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 105ms (Views: 103.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?direction=asc&page=1&sort=nome" for 127.0.0.1 at 2013-02-04 22:40:59 -0300
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Processing by EmployeesController#index as HTML
+  Parameters: {"direction"=>"asc", "page"=>"1", "sort"=>"nome"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY name asc LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "employees" 
+  Rendered employees/_employee.html.erb (7.1ms)
+  Rendered employees/_employee.html.erb (6.1ms)
+  Rendered employees/_employee.html.erb (5.5ms)
+  Rendered employees/_employee.html.erb (6.4ms)
+  Rendered employees/_employee.html.erb (6.0ms)
+  Rendered employees/_employees.html.erb (49.9ms)
+  Rendered employees/index.html.erb within layouts/application (52.1ms)
+Compiled application.js  (4ms)  (pid 14788)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (50.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 213ms (Views: 210.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/employees?utf8=%E2%9C%93&search=luiz&direction=asc&sort=nome&utf8=%E2%9C%93&_method=put&authenticity_token=zsV%2FmVR%2BA%2B8ezrVKkCl%2B0ajYdy%2FHf48C3NCI7TJyQUY%3D&employee%5Bname%5D=11AAUser&employee%5Bfaults_number%5D=1" for 127.0.0.1 at 2013-02-04 22:41:08 -0300
+Processing by EmployeesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"luiz", "direction"=>"asc", "sort"=>"nome", "authenticity_token"=>"zsV/mVR+A+8ezrVKkCl+0ajYdy/Hf48C3NCI7TJyQUY=", "employee"=>{"name"=>"11AAUser", "faults_number"=>"1"}}
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" WHERE (name LIKE '%luiz%') ORDER BY name asc LIMIT 5 OFFSET 0
+  Rendered employees/_employee.html.erb (8.8ms)
+  Rendered employees/_employees.html.erb (14.6ms)
+  Rendered employees/index.html.erb within layouts/application (16.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (5.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 104ms (Views: 102.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-04 22:42:20 -0300
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc LIMIT 5 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "employees" [0m
+  Rendered employees/_employee.html.erb (37.8ms)
+  Rendered employees/_employee.html.erb (5.6ms)
+  Rendered employees/_employee.html.erb (5.3ms)
+  Rendered employees/_employee.html.erb (5.2ms)
+  Rendered employees/_employee.html.erb (5.2ms)
+  Rendered employees/_employees.html.erb (70.7ms)
+  Rendered employees/index.html.erb within layouts/application (72.8ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (3.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 108ms (Views: 106.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees?utf8=%E2%9C%93&search=&direction=&sort=&utf8=%E2%9C%93&_method=put&authenticity_token=zsV%2FmVR%2BA%2B8ezrVKkCl%2B0ajYdy%2FHf48C3NCI7TJyQUY%3D&employee%5Bname%5D=11AAUser&employee%5Bfaults_number%5D=1" for 127.0.0.1 at 2013-02-04 22:43:32 -0300
+Processing by EmployeesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "direction"=>"", "sort"=>"", "authenticity_token"=>"zsV/mVR+A+8ezrVKkCl+0ajYdy/Hf48C3NCI7TJyQUY=", "employee"=>{"name"=>"11AAUser", "faults_number"=>"1"}}
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE (name LIKE '%%') ORDER BY name asc LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "employees" WHERE (name LIKE '%%')
+  Rendered employees/_employee.html.erb (10.7ms)
+  Rendered employees/_employee.html.erb (8.2ms)
+  Rendered employees/_employee.html.erb (10.1ms)
+  Rendered employees/_employee.html.erb (8.6ms)
+  Rendered employees/_employee.html.erb (9.9ms)
+  Rendered employees/_employees.html.erb (65.5ms)
+  Rendered employees/index.html.erb within layouts/application (67.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (6.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 180ms (Views: 178.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/?_method=put&authenticity_token=zsV%2FmVR%2BA%2B8ezrVKkCl%2B0ajYdy%2FHf48C3NCI7TJyQUY%3D&direction=asc&employee%5Bfaults_number%5D=1&employee%5Bname%5D=11AAUser&search=&sort=faltas&utf8=%E2%9C%93" for 127.0.0.1 at 2013-02-04 22:43:43 -0300
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  Parameters: {"authenticity_token"=>"zsV/mVR+A+8ezrVKkCl+0ajYdy/Hf48C3NCI7TJyQUY=", "direction"=>"asc", "employee"=>{"faults_number"=>"1", "name"=>"11AAUser"}, "search"=>"", "sort"=>"faltas", "utf8"=>"✓"}
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees" WHERE (name LIKE '%%') ORDER BY name asc LIMIT 5 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "employees" WHERE (name LIKE '%%')[0m
+  Rendered employees/_employee.html.erb (9.9ms)
+  Rendered employees/_employee.html.erb (6.2ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/_employee.html.erb (5.3ms)
+  Rendered employees/_employee.html.erb (5.6ms)
+  Rendered employees/_employees.html.erb (47.6ms)
+  Rendered employees/index.html.erb within layouts/application (49.8ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (3.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 129ms (Views: 127.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/?_method=put&authenticity_token=zsV%2FmVR%2BA%2B8ezrVKkCl%2B0ajYdy%2FHf48C3NCI7TJyQUY%3D&direction=asc&employee%5Bfaults_number%5D=1&employee%5Bname%5D=11AAUser&page=2&search=&sort=faltas&utf8=%E2%9C%93" for 127.0.0.1 at 2013-02-04 22:43:46 -0300
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  Parameters: {"authenticity_token"=>"zsV/mVR+A+8ezrVKkCl+0ajYdy/Hf48C3NCI7TJyQUY=", "direction"=>"asc", "employee"=>{"faults_number"=>"1", "name"=>"11AAUser"}, "page"=>"2", "search"=>"", "sort"=>"faltas", "utf8"=>"✓"}
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees" WHERE (name LIKE '%%') ORDER BY name asc LIMIT 5 OFFSET 5
+  Rendered employees/_employee.html.erb (8.2ms)
+  Rendered employees/_employee.html.erb (5.9ms)
+  Rendered employees/_employee.html.erb (5.6ms)
+  Rendered employees/_employee.html.erb (5.7ms)
+  Rendered employees/_employees.html.erb (40.2ms)
+  Rendered employees/index.html.erb within layouts/application (42.6ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (3.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 125ms (Views: 124.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/?_method=put&authenticity_token=zsV%2FmVR%2BA%2B8ezrVKkCl%2B0ajYdy%2FHf48C3NCI7TJyQUY%3D&direction=asc&employee%5Bfaults_number%5D=1&employee%5Bname%5D=11AAUser&search=&sort=faltas&utf8=%E2%9C%93" for 127.0.0.1 at 2013-02-04 22:43:49 -0300
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Processing by EmployeesController#index as HTML
+  Parameters: {"authenticity_token"=>"zsV/mVR+A+8ezrVKkCl+0ajYdy/Hf48C3NCI7TJyQUY=", "direction"=>"asc", "employee"=>{"faults_number"=>"1", "name"=>"11AAUser"}, "search"=>"", "sort"=>"faltas", "utf8"=>"✓"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE (name LIKE '%%') ORDER BY name asc LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "employees" WHERE (name LIKE '%%')
+  Rendered employees/_employee.html.erb (7.0ms)
+  Rendered employees/_employee.html.erb (6.3ms)
+  Rendered employees/_employee.html.erb (10.4ms)
+  Rendered employees/_employee.html.erb (5.5ms)
+  Rendered employees/_employee.html.erb (5.8ms)
+  Rendered employees/_employees.html.erb (80.4ms)
+  Rendered employees/index.html.erb within layouts/application (82.0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (3.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 119ms (Views: 117.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/?_method=put&authenticity_token=zsV%2FmVR%2BA%2B8ezrVKkCl%2B0ajYdy%2FHf48C3NCI7TJyQUY%3D&direction=asc&employee%5Bfaults_number%5D=1&employee%5Bname%5D=11AAUser&page=2&search=&sort=faltas&utf8=%E2%9C%93" for 127.0.0.1 at 2013-02-04 22:43:54 -0300
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Processing by EmployeesController#index as HTML
+  Parameters: {"authenticity_token"=>"zsV/mVR+A+8ezrVKkCl+0ajYdy/Hf48C3NCI7TJyQUY=", "direction"=>"asc", "employee"=>{"faults_number"=>"1", "name"=>"11AAUser"}, "page"=>"2", "search"=>"", "sort"=>"faltas", "utf8"=>"✓"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE (name LIKE '%%') ORDER BY name asc LIMIT 5 OFFSET 5[0m
+  Rendered employees/_employee.html.erb (6.6ms)
+  Rendered employees/_employee.html.erb (5.3ms)
+  Rendered employees/_employee.html.erb (6.4ms)
+  Rendered employees/_employee.html.erb (5.3ms)
+  Rendered employees/_employees.html.erb (33.9ms)
+  Rendered employees/index.html.erb within layouts/application (35.4ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (3.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 106ms (Views: 104.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?_method=put&authenticity_token=zsV%2FmVR%2BA%2B8ezrVKkCl%2B0ajYdy%2FHf48C3NCI7TJyQUY%3D&direction=asc&employee%5Bfaults_number%5D=1&employee%5Bname%5D=11AAUser&search=&sort=nome&utf8=%E2%9C%93" for 127.0.0.1 at 2013-02-04 22:43:57 -0300
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  Parameters: {"authenticity_token"=>"zsV/mVR+A+8ezrVKkCl+0ajYdy/Hf48C3NCI7TJyQUY=", "direction"=>"asc", "employee"=>{"faults_number"=>"1", "name"=>"11AAUser"}, "search"=>"", "sort"=>"nome", "utf8"=>"✓"}
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees" WHERE (name LIKE '%%') ORDER BY name asc LIMIT 5 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "employees" WHERE (name LIKE '%%')[0m
+  Rendered employees/_employee.html.erb (44.8ms)
+  Rendered employees/_employee.html.erb (6.6ms)
+  Rendered employees/_employee.html.erb (5.7ms)
+  Rendered employees/_employee.html.erb (7.4ms)
+  Rendered employees/_employee.html.erb (6.4ms)
+  Rendered employees/_employees.html.erb (85.7ms)
+  Rendered employees/index.html.erb within layouts/application (87.5ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (5.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 127ms (Views: 125.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/employees?utf8=%E2%9C%93&search=Teste&direction=asc&sort=nome&utf8=%E2%9C%93&_method=put&authenticity_token=zsV%2FmVR%2BA%2B8ezrVKkCl%2B0ajYdy%2FHf48C3NCI7TJyQUY%3D&employee%5Bname%5D=11AAUser&employee%5Bfaults_number%5D=1" for 127.0.0.1 at 2013-02-04 22:44:03 -0300
+Processing by EmployeesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Teste", "direction"=>"asc", "sort"=>"nome", "authenticity_token"=>"zsV/mVR+A+8ezrVKkCl+0ajYdy/Hf48C3NCI7TJyQUY=", "employee"=>{"name"=>"11AAUser", "faults_number"=>"1"}}
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE (name LIKE '%Teste%') ORDER BY name asc LIMIT 5 OFFSET 0[0m
+  Rendered employees/_employee.html.erb (6.0ms)
+  Rendered employees/_employee.html.erb (6.0ms)
+  Rendered employees/_employee.html.erb (6.8ms)
+  Rendered employees/_employees.html.erb (27.1ms)
+  Rendered employees/index.html.erb within layouts/application (28.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (7.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 137ms (Views: 134.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-04 22:44:07 -0300
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY name asc LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "employees" 
+  Rendered employees/_employee.html.erb (6.1ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/_employee.html.erb (38.9ms)
+  Rendered employees/_employee.html.erb (5.6ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/_employees.html.erb (71.8ms)
+  Rendered employees/index.html.erb within layouts/application (73.4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (3.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 108ms (Views: 107.6ms | ActiveRecord: 0.6ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-04 22:46:34 -0300
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc LIMIT 5 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "employees" [0m
+  Rendered employees/_employee.html.erb (639.2ms)
+  Rendered employees/_employee.html.erb (5.6ms)
+  Rendered employees/_employee.html.erb (5.7ms)
+  Rendered employees/_employee.html.erb (5.4ms)
+  Rendered employees/_employee.html.erb (6.1ms)
+  Rendered employees/_employees.html.erb (706.2ms)
+  Rendered employees/index.html.erb within layouts/application (715.9ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (135.5ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 1066ms (Views: 1062.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-04 22:47:58 -0300
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc LIMIT 5 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "employees" [0m
+  Rendered employees/_employee.html.erb (7.3ms)
+  Rendered employees/_employee.html.erb (6.0ms)
+  Rendered employees/_employee.html.erb (6.0ms)
+  Rendered employees/_employee.html.erb (5.6ms)
+  Rendered employees/_employee.html.erb (6.4ms)
+  Rendered employees/_employees.html.erb (43.0ms)
+  Rendered employees/index.html.erb within layouts/application (45.2ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered layouts/_navigation.html.erb (3.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 123ms (Views: 121.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-04 22:49:21 -0300
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees" ORDER BY name asc LIMIT 5 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "employees" [0m
+  Rendered employees/_employee.html.erb (9.4ms)
+  Rendered employees/_employee.html.erb (8.2ms)
+  Rendered employees/_employee.html.erb (8.2ms)
+  Rendered employees/_employee.html.erb (8.4ms)
+  Rendered employees/_employee.html.erb (8.2ms)
+  Rendered employees/_employees.html.erb (56.5ms)
+  Rendered employees/index.html.erb within layouts/application (59.5ms)
+Completed 500 Internal Server Error in 705ms
+
+ExecJS::RuntimeError - SyntaxError: reserved word "function" on line 50
+  (in /home/luiz-varela/Documents/rails3-bootstrap-devise-cancan/app/assets/javascripts/employees.js.coffee):
+  (gem) execjs-1.4.0/lib/execjs/external_runtime.rb:66:in `extract_result'
+  (gem) execjs-1.4.0/lib/execjs/external_runtime.rb:28:in `block in exec'
+  (gem) execjs-1.4.0/lib/execjs/external_runtime.rb:41:in `compile_to_tempfile'
+  (gem) execjs-1.4.0/lib/execjs/external_runtime.rb:27:in `exec'
+  (gem) execjs-1.4.0/lib/execjs/external_runtime.rb:19:in `eval'
+  (gem) execjs-1.4.0/lib/execjs/external_runtime.rb:33:in `call'
+  (gem) coffee-script-2.2.0/lib/coffee_script.rb:57:in `compile'
+  (gem) tilt-1.3.3/lib/tilt/coffee.rb:46:in `evaluate'
+  (gem) tilt-1.3.3/lib/tilt/template.rb:76:in `render'
+  (gem) sprockets-2.2.2/lib/sprockets/context.rb:193:in `block in evaluate'
+  (gem) sprockets-2.2.2/lib/sprockets/context.rb:190:in `each'
+  (gem) sprockets-2.2.2/lib/sprockets/context.rb:190:in `evaluate'
+  (gem) sprockets-2.2.2/lib/sprockets/processed_asset.rb:12:in `initialize'
+  (gem) sprockets-2.2.2/lib/sprockets/base.rb:249:in `new'
+  (gem) sprockets-2.2.2/lib/sprockets/base.rb:249:in `block in build_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/base.rb:270:in `circular_call_protection'
+  (gem) sprockets-2.2.2/lib/sprockets/base.rb:248:in `build_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/index.rb:93:in `block in build_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/caching.rb:19:in `cache_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/index.rb:92:in `build_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/base.rb:169:in `find_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/index.rb:60:in `find_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/processed_asset.rb:44:in `block in init_with'
+  (gem) sprockets-2.2.2/lib/sprockets/processed_asset.rb:37:in `map'
+  (gem) sprockets-2.2.2/lib/sprockets/processed_asset.rb:37:in `init_with'
+  (gem) sprockets-2.2.2/lib/sprockets/asset.rb:24:in `from_hash'
+  (gem) sprockets-2.2.2/lib/sprockets/caching.rb:15:in `cache_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/index.rb:92:in `build_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/base.rb:169:in `find_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/index.rb:60:in `find_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/bundled_asset.rb:38:in `init_with'
+  (gem) sprockets-2.2.2/lib/sprockets/asset.rb:24:in `from_hash'
+  (gem) sprockets-2.2.2/lib/sprockets/caching.rb:15:in `cache_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/index.rb:92:in `build_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/base.rb:169:in `find_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/index.rb:60:in `find_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/environment.rb:78:in `find_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/base.rb:177:in `[]'
+  (gem) actionpack-3.2.11/lib/sprockets/helpers/rails_helper.rb:126:in `asset_for'
+  (gem) actionpack-3.2.11/lib/sprockets/helpers/rails_helper.rb:27:in `block in javascript_include_tag'
+  (gem) actionpack-3.2.11/lib/sprockets/helpers/rails_helper.rb:26:in `collect'
+  (gem) actionpack-3.2.11/lib/sprockets/helpers/rails_helper.rb:26:in `javascript_include_tag'
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___771373905_82594150'
+  (gem) actionpack-3.2.11/lib/action_view/template.rb:145:in `block in render'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:125:in `instrument'
+  (gem) actionpack-3.2.11/lib/action_view/template.rb:143:in `render'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:18:in `render'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/renderer.rb:36:in `render_template'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/renderer.rb:17:in `render'
+  (gem) actionpack-3.2.11/lib/abstract_controller/rendering.rb:110:in `_render_template'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  (gem) actionpack-3.2.11/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  (gem) actionpack-3.2.11/lib/abstract_controller/rendering.rb:88:in `render'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rendering.rb:16:in `render'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  (gem) activesupport-3.2.11/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /home/luiz-varela/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  (gem) activesupport-3.2.11/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  (gem) activerecord-3.2.11/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:39:in `render'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:414:in `_run__508038685__process_action__976210246__callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.11/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) activerecord-3.2.11/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.11/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.11/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/mapper.rb:42:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `each'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:601:in `call'
+  (gem) better_errors-0.3.2/lib/better_errors/middleware.rb:51:in `app_call'
+  (gem) better_errors-0.3.2/lib/better_errors/middleware.rb:45:in `call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.3/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.3/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.3/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.3/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) activerecord-3.2.11/lib/active_record/query_cache.rb:64:in `call'
+  (gem) activerecord-3.2.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `_run__922949234__call__860957618__callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.11/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:16:in `call'
+  (gem) quiet_assets-1.0.1/lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.3/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.3/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.11/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.3/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/static.rb:62:in `call'
+  (gem) railties-3.2.11/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.11/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.3/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.11/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) rack-1.4.3/lib/rack/handler/webrick.rb:59:in `service'
+  /home/luiz-varela/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/luiz-varela/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/luiz-varela/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/84262750/variables" for 127.0.0.1 at 2013-02-04 22:49:22 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-04 22:50:09 -0300
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY name asc LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "employees" 
+  Rendered employees/_employee.html.erb (6.8ms)
+  Rendered employees/_employee.html.erb (5.5ms)
+  Rendered employees/_employee.html.erb (5.5ms)
+  Rendered employees/_employee.html.erb (6.6ms)
+  Rendered employees/_employee.html.erb (6.0ms)
+  Rendered employees/_employees.html.erb (41.1ms)
+  Rendered employees/index.html.erb within layouts/application (42.9ms)
+Compiled employees.js  (146ms)  (pid 17039)
+Compiled application.js  (4ms)  (pid 17039)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m
+  Rendered layouts/_navigation.html.erb (4.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 298ms (Views: 296.7ms | ActiveRecord: 0.6ms)
